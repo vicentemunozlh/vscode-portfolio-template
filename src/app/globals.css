@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1e1e1e;
+  --foreground: #d4d4d4;
+  --sidebar-bg: #252526;
+  --sidebar-border: #3c3c3c;
+  --editor-bg: #1e1e1e;
+  --file-hover: #2a2d2e;
+  --file-active: #37373d;
+  --text-muted: #858585;
+  --accent: #007acc;
+}
+
+/* Custom properties for Tailwind */
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* VS Code-like scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sidebar-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* File explorer styles */
+.file-explorer {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.file-item {
+  padding: 4px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  transition: background-color 0.1s;
+}
+
+.file-item:hover {
+  background: var(--file-hover);
+}
+
+.file-item.active {
+  background: var(--file-active);
+}
+
+.file-item.folder {
+  font-weight: 500;
+}
+
+.file-item.file {
+  padding-left: 20px;
+}
+
+/* Editor styles */
+.editor {
+  background: var(--editor-bg);
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-tabs {
+  background: var(--sidebar-bg);
+  border-bottom: 1px solid var(--sidebar-border);
+  display: flex;
+  height: 35px;
+}
+
+.tab {
+  background: var(--editor-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  min-width: 120px;
+  max-width: 200px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--editor-bg);
+  border-bottom: 2px solid var(--accent);
+}
+
+.tab-name {
+  flex: 1;
+  font-size: 13px;
+  color: var(--foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 2px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.tab-close:hover {
+  background: var(--file-hover);
+  color: var(--foreground);
+}
+
+.editor-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  line-height: 1.6;
+}
+
+/* Syntax highlighting */
+.keyword {
+  color: #569cd6;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.comment {
+  color: #6a9955;
+}
+
+.function {
+  color: #dcdcaa;
+}
+
+.number {
+  color: #b5cea8;
+}
+
+.operator {
+  color: #d4d4d4;
+}
+
+/* Project card styles */
+.project-card {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--sidebar-border);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.project-title {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  color: var(--foreground);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.project-link:hover {
+  background: var(--accent);
+  color: white;
+}
