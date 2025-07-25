@@ -1,21 +1,21 @@
 export interface FileItem {
   id: string;
   name: string;
-  type: 'file' | 'folder';
+  type: "file" | "folder";
   children?: FileItem[];
   content?: string;
 }
 
 export const portfolioData: FileItem[] = [
   {
-    id: 'projects',
-    name: 'projects',
-    type: 'folder',
+    id: "projects",
+    name: "projects",
+    type: "folder",
     children: [
       {
-        id: 'project-1',
-        name: 'project-1.md',
-        type: 'file',
+        id: "project-1",
+        name: "project-1.md",
+        type: "file",
         content: `#  Project 1 (Example)
 
 A sample REST API project to demonstrate the portfolio format.
@@ -45,9 +45,9 @@ app.get('/api/products', async (req, res) => {
 - [GitHub Repository](https://github.com/yourusername/project-1)`,
       },
       {
-        id: 'project-2',
-        name: 'project-2.md',
-        type: 'file',
+        id: "project-2",
+        name: "project-2.md",
+        type: "file",
         content: `# 🏗️ Project 2 (Example)
 
 A sample microservices project to demonstrate the portfolio format.
@@ -77,9 +77,9 @@ service UserService {
 - [GitHub Repository](https://github.com/yourusername/project-2)`,
       },
       {
-        id: 'project-3',
-        name: 'project-3.md',
-        type: 'file',
+        id: "project-3",
+        name: "project-3.md",
+        type: "file",
         content: `#  Project 3 (Example)
 
 A sample real-time chat application to demonstrate the portfolio format.
@@ -113,9 +113,9 @@ io.on('connection', (socket) => {
     ],
   },
   {
-    id: 'hello',
-    name: 'hello.md',
-    type: 'file',
+    id: "hello",
+    name: "hello.md",
+    type: "file",
     content: `# 👋 Hello, I'm [YOUR NAME]!
 
 *Template: Replace [YOUR NAME] with your actual name*
@@ -145,9 +145,9 @@ Feel free to explore my example projects in the folders above, or reach out to m
 Happy coding! `,
   },
   {
-    id: 'experience',
-    name: 'experience.md',
-    type: 'file',
+    id: "experience",
+    name: "experience.md",
+    type: "file",
     content: `# 💼 Professional Experience (Examples)
 
 *Note: These are example experiences to demonstrate the portfolio format*
@@ -181,9 +181,9 @@ Happy coding! `,
 - **Innovation**: Introduced automated testing practices`,
   },
   {
-    id: 'education',
-    name: 'education.md',
-    type: 'file',
+    id: "education",
+    name: "education.md",
+    type: "file",
     content: `# 🎓 Education (Examples)
 
 *Note: These are example educational details to demonstrate the portfolio format*

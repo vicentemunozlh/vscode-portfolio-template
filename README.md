@@ -2,9 +2,10 @@
 
 A basic but cool portfolio website that looks and feels like VS Code. Perfect for developers to showcase their projects.
 
-##  Quick Start
+## Quick Start
 
 1. **Clone and install**:
+
    ```bash
    git clone https://github.com/yourusername/vscode-portfolio-template.git
    cd vscode-portfolio-template
@@ -28,7 +29,7 @@ A basic but cool portfolio website that looks and feels like VS Code. Perfect fo
 - Responsive design
 - Easy customization
 
-##  Structure
+## Structure
 
 ```
 src/
@@ -44,7 +45,7 @@ src/
 - React Icons
 - TypeScript
 
-##  License
+## License
 
 MIT - Use freely for your portfolio!
 
