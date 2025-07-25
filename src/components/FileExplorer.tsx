@@ -2,13 +2,7 @@
 
 import { useState } from "react";
 
-interface FileItem {
-  id: string;
-  name: string;
-  type: "file" | "folder";
-  children?: FileItem[];
-  content?: string;
-}
+import { FileItem } from "@/types/intex";
 
 interface FileExplorerProps {
   files: FileItem[];

@@ -1,12 +1,6 @@
 "use client";
 
-interface FileItem {
-  id: string;
-  name: string;
-  type: "file" | "folder";
-  children?: FileItem[];
-  content?: string;
-}
+import { FileItem } from "@/types/intex";
 
 interface CodeEditorProps {
   selectedFile: FileItem | null;
